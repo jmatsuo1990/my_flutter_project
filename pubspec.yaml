@@ -1,0 +1,19 @@
+name: my_flutter_project
+description: "A new Flutter project."
+version: 1.0.0+1
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: 
+  freezed_annotation: 
+  logging:
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints:
+  build_runner: 
+  freezed: 
+flutter:
+  uses-material-design: true

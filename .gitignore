@@ -1,0 +1,10 @@
+.dart_tool/
+.vscode/
+*.fvmrc
+*.DS_Store
+coverage/
+
+build/
+
+# FVM Version Cache
+.fvm/
