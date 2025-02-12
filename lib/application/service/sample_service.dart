@@ -4,6 +4,7 @@ import 'package:my_flutter_project/domain/enum/nutrient_type.dart';
 import 'package:my_flutter_project/domain/model/food_entity.dart';
 import 'package:my_flutter_project/domain/model/nutrient_entity.dart';
 import 'package:my_flutter_project/domain/service/calc_food_kcal_service.dart';
+import 'package:my_flutter_project/extension/double_extension.dart';
 
 class SampleService {
   final rice = const FoodEntity(
@@ -25,12 +26,13 @@ class SampleService {
   );
 
   /// 納豆ご飯のカロリー計算
-  void excecute() {
+  double excecute() {
     double totalKcal = 0.0;
     final calcService = CalcFoodKcalService();
     totalKcal += calcService.execute(rice);
     totalKcal += calcService.execute(natto);
 
     log('Total kcal: $totalKcal');
+    return totalKcal.roundToFirstDecimalPlace;
   }
 }
